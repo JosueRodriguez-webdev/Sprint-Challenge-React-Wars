@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import styled from "styled-components";
 
 import Cardinfo from "./Cardinfo.js";
+
+const CardDesign = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+`;
 
 export default function Card() {
   const [character, setCharacter] = useState([]);
@@ -18,11 +25,11 @@ export default function Card() {
       });
   }, []);
   return (
-    <div className="card-container">
+    <CardDesign className="card-container">
       {character.map((item) => (
         //console.log(item)
         <Cardinfo data={item} />
       ))}
-    </div>
+    </CardDesign>
   );
 }
