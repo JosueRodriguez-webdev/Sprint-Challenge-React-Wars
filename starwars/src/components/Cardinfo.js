@@ -17,7 +17,7 @@ export default function Cardinfo(props) {
   return (
     <CardinfoDesign className="card-layout">
       <h1>{PD.name}</h1>
-      <p> Info:</p>
+      <p> Stats:</p>
       <div className="info">
         <p>gender: {PD.gender}</p>
         <p>height: {PD.height}</p>
